@@ -97,6 +97,7 @@ static void init(struct Pet *pet) {
     if (pet->satiety < 0) {pet->satiety = 0;}
 
     // decrease happiness
+    // TODO not time correlated, too much restart dependent
     if (pet->satiety < 80) {
         const int happiness_lost = (80 - pet->satiety) / 2;
         pet->happiness -= happiness_lost;
